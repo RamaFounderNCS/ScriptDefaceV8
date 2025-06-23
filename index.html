@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HACKED BY MR.M05T3R</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,142 +12,176 @@
       box-sizing: border-box;
     }
 
-    body {
-      background-color: #000;
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: monospace;
+      background: #000;
       color: #0f0;
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-      padding: 20px;
     }
 
-    canvas#matrix {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    canvas#bg {
       position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
+      width: 100%;
+      height: 100%;
     }
 
     .container {
-      text-align: center;
       max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .glitch {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 1px 1px red, -1px -1px blue;
-      animation: glitch 0.8s infinite;
-      margin: 20px 0;
-    }
-
-    @keyframes glitch {
-      0% { text-shadow: 2px 2px red, -2px -2px blue; }
-      25% { text-shadow: -2px -2px red, 2px 2px blue; }
-      50% { text-shadow: 2px -2px red, -2px 2px blue; }
-      75% { text-shadow: -2px 2px red, 2px -2px blue; }
-      100% { text-shadow: 2px 2px red, -2px -2px blue; }
-    }
-
-    .subtext, .ipinfo {
-      margin: 10px auto;
-      color: #ccc;
-    }
-
-    .countdown {
-      color: #ff073a;
-      font-size: 1.2rem;
-      margin: 20px auto;
+      width: 100%;
+      z-index: 1;
     }
 
     .image-container img {
-      max-width: 500px;
       width: 100%;
-      margin: 20px auto;
+      max-width: 500px;
       border-radius: 10px;
-      box-shadow: 0 0 15px #0f0;
+      box-shadow: 0 0 30px #ff0000aa;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
     }
 
-    @media(max-width: 600px) {
-      .glitch {
-        font-size: 1.8rem;
+    .hacked-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f00;
+      text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 40px #0ff;
+      animation: glitch 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: #ff073a;
+      margin-top: 30px;
+      word-wrap: break-word;
+      background: rgba(255, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px red;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+      20% {
+        text-shadow: -2px 0 green, 2px 0 red;
+      }
+      40% {
+        text-shadow: 2px 2px blue, -2px -2px red;
+      }
+      60% {
+        text-shadow: -2px -2px green, 2px 2px red;
+      }
+      80% {
+        text-shadow: 2px -2px blue, -2px 2px red;
+      }
+      100% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 15px red;
+      }
+      50% {
+        box-shadow: 0 0 30px red;
+      }
+      100% {
+        box-shadow: 0 0 15px red;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hacked-title {
+        font-size: 2rem;
+      }
+
+      .content {
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        font-size: 0.75rem;
       }
     }
   </style>
 </head>
 
 <body onclick="playAudio()">
-  <canvas id="matrix"></canvas>
+  <canvas id="bg"></canvas>
   <div class="container">
     <div class="image-container">
-      <img src="https://i.ibb.co/Zssf4VX/NCSID.jpg" alt="NEWBIE CYBER SECURITY Logo">
+      <img src="https://i.ibb.co/Zssf4VX/NCSID.jpg" alt="NEWBIE CYBER SECURITY Logo" loading="lazy">
     </div>
 
-    <h1 class="glitch">HACKED BY MR.M05T3R</h1>
+    <h1 class="hacked-title">HACKED BY MR.M05T3R</h1>
 
-    <div class="subtext">MAAF WEBSITE INI TELAH DIAMBIL ALIH</div>
-    <div class="countdown">Countdown Invasi: <span id="countdown"></span></div>
-    <div class="ipinfo" id="ipinfo">🔍 Mendapatkan informasi IP...</div>
+    <p class="content">MAAF WEBSITE ANDA TELAH KAMI AMBIL ALIH,<br /> SEMUA AKTIVITAS DIAWASI OLEH KAMI.</p>
+
+    <p class="content">COUP BY NEWBIE CYBER SECURITY</p>
+
+    <p class="footer">
+      DATA: [ AFIAH ZAHRA MAULIDA - PASURUAN, 30 APRIL 2004 - FB: 100010362798689 - IG: afiah_zahra - TIKTOK: @afiahzahraa - @axhfi1 - WA: wa.me/6285850595576 ]<br /><br />
+      [ WARDA FATIMA - PASURUAN, 22 AGUSTUS 2002 - FB: warda.fatimah.5 - IG: _warda_fatimah_86_ - TIKTOK: @wardafatimah8 - WA: wa.me/6285257958269 ]
+    </p>
   </div>
 
   <audio id="hacked-audio" autoplay loop>
     <source src="https://github.com/RamaFounderNCS/SoundNCS/raw/refs/heads/main/BloodLineBBHC.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
   </audio>
 
   <script>
-    // Matrix Effect
-    const c = document.getElementById("matrix");
-    const ctx = c.getContext("2d");
-    c.height = window.innerHeight;
-    c.width = window.innerWidth;
-    const letters = "01";
-    const fontSize = 14;
-    const columns = c.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, c.width, c.height);
-      ctx.fillStyle = "#0f0";
-      ctx.font = fontSize + "px monospace";
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > c.height || Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
+    function playAudio() {
+      const audio = document.getElementById('hacked-audio');
+      if (audio.paused) {
+        audio.play().catch(() => {});
       }
     }
 
-    setInterval(drawMatrix, 35);
+    // Simple matrix WebGL background
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
 
-    // Countdown
-    const target = new Date().getTime() + 86400000;
-    const countdownEl = document.getElementById("countdown");
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = target - now;
-      const hours = Math.floor((distance % 86400000) / 3600000);
-      const minutes = Math.floor((distance % 3600000) / 60000);
-      const seconds = Math.floor((distance % 60000) / 1000);
-      countdownEl.textContent = `${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-
-    // GeoIP Info
-    fetch('https://ipapi.co/json')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("ipinfo").innerHTML = `🌍 Kamu dari ${data.city}, ${data.country_name} | IP: ${data.ip}`;
+    const letters = Array(256).join("1").split("");
+    const draw = () => {
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0f0";
+      letters.map((y_pos, index) => {
+        const text = String.fromCharCode(3e4 + Math.random() * 33);
+        const x_pos = index * 10;
+        ctx.fillText(text, x_pos, y_pos);
+        letters[index] = y_pos > 758 + Math.random() * 1e4 ? 0 : y_pos + 10;
       });
-
-    // Audio Fallback
-    function playAudio() {
-      const audio = document.getElementById("hacked-audio");
-      if (audio.paused) audio.play().catch(() => {});
-    }
+    };
+    setInterval(draw, 33);
   </script>
 </body>
+
 </html>
