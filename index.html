@@ -2,10 +2,9 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HACKED BY MR.M05T3R</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKED BY MR.M05T3R - FULL EXTREME PRO+</title>
   <style>
     * {
       margin: 0;
@@ -13,148 +12,156 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
       background: #000;
+      font-family: 'Courier New', Courier, monospace;
       color: #0f0;
-      font-family: 'Share Tech Mono', monospace;
+      overflow: hidden;
+    }
+
+    canvas#matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      height: 100vh;
       text-align: center;
-      overflow-x: hidden;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .container {
-      max-width: 750px;
-      width: 100%;
-      padding: 10px;
-      position: relative;
-      z-index: 2;
+      padding: 20px;
     }
 
     .image-container img {
-      width: 100%;
-      max-width: 550px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px red;
+      animation: pulse 2s infinite;
     }
 
     .hacked-title {
-      color: #ff073a;
+      color: red;
       font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 0 0 10px red, 0 0 20px crimson;
-      margin-bottom: 15px;
+      text-shadow: 0 0 5px red, 0 0 10px #0ff;
       animation: glitch 1s infinite;
+      margin-top: 20px;
     }
 
-    @keyframes glitch {
-      0% {
-        transform: translate(0);
-      }
-
-      20% {
-        transform: translate(-2px, 2px);
-      }
-
-      40% {
-        transform: translate(2px, -2px);
-      }
-
-      60% {
-        transform: translate(-1px, 1px);
-      }
-
-      80% {
-        transform: translate(1px, -1px);
-      }
-
-      100% {
-        transform: translate(0);
-      }
-    }
-
-    .content {
-      font-size: 1.1rem;
+    .content, .geoip, .clock, .countdown {
+      font-size: 1rem;
       color: #ccc;
-      margin-bottom: 15px;
-      line-height: 1.6;
+      margin-top: 10px;
     }
 
     .footer {
-      font-size: 0.9rem;
-      font-weight: bold;
       color: #ff073a;
-      margin-top: 20px;
-      overflow-wrap: break-word;
+      font-size: 0.8rem;
+      margin-top: 30px;
+      background: rgba(255, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 90vw;
     }
 
-    @media (max-width: 480px) {
-      .hacked-title {
-        font-size: 1.6rem;
-      }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 15px red; }
+      50% { box-shadow: 0 0 30px red; }
+      100% { box-shadow: 0 0 15px red; }
+    }
 
-      .content {
-        font-size: 1rem;
-      }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -2px 0 green, 2px 0 red; }
+      40% { text-shadow: 2px 2px blue, -2px -2px red; }
+      60% { text-shadow: -2px -2px green, 2px 2px red; }
+      80% { text-shadow: 2px -2px blue, -2px 2px red; }
+      100% { text-shadow: 2px 0 red, -2px 0 blue; }
+    }
 
-      .footer {
-        font-size: 0.8rem;
-      }
+    @media (max-width: 768px) {
+      .hacked-title { font-size: 2rem; }
+      .content, .geoip, .clock, .countdown { font-size: 0.9rem; }
+      .footer { font-size: 0.7rem; }
     }
   </style>
 </head>
 
 <body onclick="playAudio()">
+  <canvas id="matrix"></canvas>
   <div class="container">
     <div class="image-container">
-      <img src="https://i.ibb.co/Zssf4VX/NCSID.jpg" alt="NEWBIE CYBER SECURITY Logo" loading="lazy">
+      <img src="https://i.ibb.co/Zssf4VX/NCSID.jpg" alt="NCS Logo">
     </div>
-
-    <h1 class="hacked-title">HACKED BY MR.M05T3R</h1>
-
-    <p class="content">
-      MAAF WEBSITE ANDA TELAH KAMI AMBIL ALIH,<br />
-      SEMUA AKTIVITAS DIAWASI OLEH KAMI.
-    </p>
-
-    <p class="content">COUP BY NEWBIE CYBER SECURITY</p>
-
-    <p class="footer">
-      DATA: [ AFIAH ZAHRA MAULIDA - PASURUAN, 30 APRIL 2004 - FB: 100010362798689 - IG: afiah_zahra - TIKTOK: @afiahzahraa - @axhfi1 - WA: wa.me/6285850595576 ]<br /><br />
-      [ WARDA FATIMA - PASURUAN, 22 AGUSTUS 2002 - FB: warda.fatimah.5 - IG: _warda_fatimah_86_ - TIKTOK: @wardafatimah8 - WA: wa.me/6285257958269 ]
-    </p>
+    <div class="hacked-title">HACKED BY MR.M05T3R</div>
+    <div class="content">WEBSITE INI TELAH DIAMBIL ALIH<br>AKTIVITAS ANDA DALAM PENGAWASAN</div>
+    <div class="geoip" id="geoip">🔎 Mendeteksi lokasi Anda...</div>
+    <div class="clock" id="clock"></div>
+    <div class="countdown" id="countdown"></div>
+    <div class="footer">
+      [ AFIAH ZAHRA MAULIDA - PASURUAN, 30 APRIL 2004 - IG: afiah_zahra - TIKTOK: @afiahzahraa - WA: wa.me/6285850595576 ]<br><br>
+      [ WARDA FATIMA - PASURUAN, 22 AGUSTUS 2002 - IG: _warda_fatimah_86_ - TIKTOK: @wardafatimah8 - WA: wa.me/6285257958269 ]
+    </div>
   </div>
-
   <audio id="hacked-audio" autoplay loop>
     <source src="https://github.com/RamaFounderNCS/SoundNCS/raw/refs/heads/main/BloodLineBBHC.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung audio.
   </audio>
-
   <script>
-    const audio = document.getElementById('hacked-audio');
-    document.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play().catch(() => {});
-      }
-    });
+    function playAudio() {
+      const audio = document.getElementById("hacked-audio");
+      if (audio.paused) audio.play();
+    }
+
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    let letters = Array(256).join("1").split("");
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#0F0";
+      letters.map((y, i) => {
+        const text = String.fromCharCode(3e4 + Math.random() * 33);
+        const x = i * 10;
+        ctx.fillText(text, x, y);
+        letters[i] = y > 758 + Math.random() * 1e4 ? 0 : y + 10;
+      });
+    }
+    setInterval(drawMatrix, 33);
+
+    // Live clock
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById("clock").textContent = "🕒 " + now.toLocaleTimeString();
+    }, 1000);
+
+    // Countdown
+    const target = new Date().getTime() + 86400000;
+    const countdownEl = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = target - now;
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.textContent = `🔥 Countdown Hack: ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // GeoIP Lookup (fake demo)
+    fetch("https://ipapi.co/json")
+      .then(res => res.json())
+      .then(data => {
+        const geo = `🌍 Lokasi Anda: ${data.city}, ${data.region}, ${data.country_name} | IP: ${data.ip}`;
+        document.getElementById("geoip").textContent = geo;
+        console.log("📌 Visitor Info:", data);
+      });
   </script>
 </body>
 
